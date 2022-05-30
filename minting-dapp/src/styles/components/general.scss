@@ -1,0 +1,53 @@
+:root {
+  --ideal-viewport-width: 1600;
+}
+
+@function scaleValue($value) {
+  @return calc(
+    #{$value} * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width))
+  );
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1F1D2B;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  color: #fff;
+  background: red;
+  text-align: center;
+  font-size: #{scaleValue(20)};
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    margin: 0 #{scaleValue(20)};
+  }
+}
+
+.uYscM {
+  left: 0 !important;
+  top: 0 !important;
+  position: fixed !important;
+  z-index: 9 !important;
+  width: 100vw !important;
+  padding: 0 !important;
+  height: 100vh !important;
+}

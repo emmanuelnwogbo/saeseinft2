@@ -1,0 +1,11 @@
+{
+  "build/main.css": "/build/main.css",
+  "build/main.js": "/build/main.js",
+  "build/images/slide1.svg": "/build/images/slide1.svg",
+  "build/images/slide2.svg": "/build/images/slide2.svg",
+  "build/images/rightmint.svg": "/build/images/rightmint.svg",
+  "build/images/leftmint.svg": "/build/images/leftmint.svg",
+  "build/images/man.png": "/build/images/man.png",
+  "build/images/logo.svg": "/build/images/logo.svg",
+  "build/images/rightarrow.svg": "/build/images/rightarrow.svg"
+}

@@ -1,0 +1,107 @@
+.header {
+  height: #{scaleValue(100)};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transform: translateY(#{scaleValue(49)});
+
+    @media only screen and (max-width: 414px) {
+      transform: translateY(#{scaleValue(250)});
+    }
+  }
+
+  & figure {
+    height: #{scaleValue(200)};
+
+    & img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+
+    & figure {
+      height: #{scaleValue(700)};
+
+      & img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+
+  &__social {
+      display: flex;
+      width: #{scaleValue(320)};
+      justify-content: space-between;
+      align-items: center;
+      padding-right: #{scaleValue(90)};
+
+      & span {
+        cursor: pointer;
+
+        &.etherscan {
+          font-weight: 500;
+          font-size: #{scaleValue(18)};
+          text-decoration: underline;
+          color: #000000;
+          opacity: .8;
+        }
+
+        & svg {
+          height: #{scaleValue(100)};
+          width: #{scaleValue(50)};
+
+          @media only screen and (max-width: 414px) {
+            height: #{scaleValue(200)};
+            width: #{scaleValue(200)};
+          }
+        }
+
+        &:nth-child(3) {
+          
+          & svg {
+            height: #{scaleValue(90)};
+            width: #{scaleValue(40)};
+
+            @media only screen and (max-width: 414px) {
+              height: #{scaleValue(160)};
+              width: #{scaleValue(160)};
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width: 414px) {
+        display: flex;
+        width: #{scaleValue(600)};
+        justify-content: space-between;
+        align-items: center;
+        padding-right: #{scaleValue(90)};  
+        padding-top: #{scaleValue(180)};  
+      }
+  }
+}
+
+a.ethlink {
+  font-size: #{scaleValue(20)};
+  text-decoration: underline;
+}
+
+.maxmint {
+  text-decoration: underline;
+  font-weight: 700;
+}
